@@ -4,13 +4,13 @@ const  routes=[
     {
         path:'/',
         exact:true,
-        component:Home
+        component:Login
     },
     {
-        path:'/login',
+        path:'/home',
         exact:true,
-        component:Login
-    }
+        component:Home
+    },
 ];
 
 export default routes;
