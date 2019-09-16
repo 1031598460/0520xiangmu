@@ -1,57 +1,59 @@
-const  menus=[
+
+const menus = [
   {
     icon: 'home',
-    title: '首页',
+    title: 'menus.home',
     key: '/'
   },
   {
     icon: 'appstore',
-    title: '商品',
+    title: 'menus.products',
     key: '/products',
     children: [
       {
-        icon: 'tool',
-        title: '商品管理',
-        key: '/product'
+        icon: 'bars',
+        title: 'menus.category',
+        key: '/category'
       },
       {
-        icon: 'bars',
-        title: '分类管理',
-        key: '/category'
+        icon: 'tool',
+        title: 'menus.product',
+        key: '/product'
       }
     ]
   },
   {
     icon: 'user',
-    title: '用户管理',
+    title: 'menus.user',
     key: '/user'
   },
   {
     icon: 'safety',
-    title: '权限管理',
+    title: 'menus.role',
     key: '/role'
   },
   {
     icon: 'area-chart',
-    title: '图形图表',
+    title: 'menus.charts',
     key: '/charts',
     children: [
       {
         icon: 'bar-chart',
-        title: '柱状图',
+        title: 'menus.bar',
         key: '/charts/bar'
       },
       {
         icon: 'line-chart',
-        title: '折线图',
+        title: 'menus.line',
         key: '/charts/line'
       },
       {
         icon: 'pie-chart',
-        title: '饼状图',
+        title: 'menus.pie',
         key: '/charts/pie'
       }
     ]
   },
 ];
-export  default  menus;
+
+export default menus;

@@ -29,7 +29,7 @@ function withCheckLogin(WrappedComponent) {
         }
       }*/
       if (pathname === "/login" && token) return <Redirect to="/"/>;
-      if (pathname !== "/login" && !token) return <Redirect to="/home"/>;
+      if (pathname !== "/login" && !token) return <Redirect to="/login"/>;
       return <WrappedComponent {...rest}/>;
     }
   })
