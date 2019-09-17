@@ -5,6 +5,7 @@ import { getCategories ,addCategory ,updateCategory} from '@redux/action-creator
 
 import AddCategoryForm from './add-category-form';
 import UpdateCategoryForm from  './update-category-form';
+// import DeleteCategoryForm from  './delete-category-form';
 
 @connect(
     (state)=>({categories: state.categories}),
@@ -21,6 +22,7 @@ import UpdateCategoryForm from  './update-category-form';
 
     addCategoryForm=React.createRef();
     updateCategoryForm=React.createRef();
+    // deleteCategoryForm=React.createRef();
 
 
     columns= [
@@ -36,7 +38,6 @@ import UpdateCategoryForm from  './update-category-form';
                     <Button type="link" onClick={this.showUpdateCategoryModal(category)}>修改分类</Button>
                     {/*<Button type="link" onClick={this.showDeleteCategoryModal(category)}>删除分类</Button>*/}
                     <Button type="link" >删除分类</Button>
-
                 </div>
             }
         }
@@ -96,6 +97,17 @@ import UpdateCategoryForm from  './update-category-form';
             }
         })
     };
+    // deleteCategory= () => {
+    //     const form=this.deleteCategoryForm.current;
+    //     form.validateFields((err,values) => {
+    //         if(!err){
+    //             this.props.deleteCategory(values.categoryId);
+    //             this.setState({
+    //                 isShowUpdateCategoryModal:false
+    //             })
+    //         }
+    //     })
+    // };
     hiddenUpdateCategoryModal= () => {
         this.setState({
             isShowUpdateCategoryModal: false
@@ -107,8 +119,6 @@ import UpdateCategoryForm from  './update-category-form';
     //     this.setState({
     //         isShowUpdateCategoryModal: false
     //     })
-    //     // 清空表单数据
-    //     this.updateCategoryForm.current.resetFields();
     // };
     render() {
         const { categories } =this.props;

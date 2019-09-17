@@ -1,6 +1,6 @@
 
-import { SAVE_USER ,REMOVE_USER,SET_TITLE,GET_CATEGORIES_SUCCESS,ADD_CATEGORY_SUCCESS,UPDATE_CATEGORY_SUCCESS} from './action-types';
-import { reqGetCategories,reqAddCategory ,reqUpdateCategory} from '@api';
+import { SAVE_USER ,REMOVE_USER,SET_TITLE,GET_CATEGORIES_SUCCESS,ADD_CATEGORY_SUCCESS,UPDATE_CATEGORY_SUCCESS,DELETE_CATEGORY_SUCCESS} from './action-types';
+import { reqGetCategories,reqAddCategory ,reqUpdateCategory,reqDeleteCategory} from '@api';
 
 export const saveUser = (user) => ({type: SAVE_USER, data: user});
 
@@ -29,3 +29,11 @@ export const updateCategory = (categoryId, categoryName) => {
         dispatch(updateCategorySuccess(result));
     }
 };
+
+// const deleteCategorySuccess = (category) => ({type: DELETE_CATEGORY_SUCCESS, data: category});
+// export const deleteCategory = (categoryId) => {
+//     return async (dispatch) => {
+//         const result = await reqDeleteCategory(categoryId);
+//         dispatch(deleteCategorySuccess(result));
+//     }
+// };
